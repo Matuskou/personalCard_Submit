@@ -92,8 +92,7 @@ let initialPersons = [
         persons.value.forEach((item) => {
             if(item == personShouldBeEdited){
                 name.value=item.fname
-
-                thisCard = item
+                specificCard = item
 				name.value=" "
 			}
         })
@@ -101,7 +100,7 @@ let initialPersons = [
 
 	const submit = () => {
         persons.value.forEach((item) => {
-            if(item == thisCard){
+            if(item == specificCard){
                 item.fname=name.value
             }
         })
